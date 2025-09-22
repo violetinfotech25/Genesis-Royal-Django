@@ -1,0 +1,98 @@
+{% extends "layouts/doctor_layout.html" %}
+{% load static %}
+
+{% block title %}Dr Saravanan Gobinathan{% endblock title %}
+
+{% block body %}
+
+<div class="doctor-section">
+  <div class="doctor-container">
+
+    <!-- FIRST SECTION (NOW FULL-WIDTH LIKE OTHERS) -->
+<!-- Doctor Profile Section -->
+<section class="doctor-profile-container">
+  <div class="profile-info">
+    <h2 class="profile-name">Dr. Chanrakala  Magudapathi</h2>
+    <p class="profile-subtitle">Co-Founder of Genesis Royal Infirmary</p>
+    <p class="profile-degrees">
+      <span class="degree-mark">MBBS</span>, 
+      <span class="degree-mark">DGO</span>, 
+      <span class="degree-mark">FRCOG</span>
+    </p>
+    <p class="profile-bio">
+      Dr. Gobinathan holds an <span class="degree-mark">MBBS</span> degree from <span class="highlight-place">PSG Institute of Medical Sciences and Research, Coimbatore</span>, awarded in <span class="highlight-year">January 1996</span> by The Tamilnadu Dr. MGR Medical University. He earned his <span class="degree-mark">MD in Paediatrics</span> in <span class="highlight-year">March 2002</span> from the <span class="highlight-place">Institute of Child Health, Chennai</span>. In <span class="highlight-year">November 2005</span>, he achieved the <span class="degree-mark">MRCPCH</span> qualification from the <span class="highlight-place">Royal College of Paediatricians and Child Health, UK</span>.
+    </p>
+  </div>
+  <div class="profile-photo">
+    <img src="{% static 'images/dr/chanrakala.png' %}" alt="Dr Chanrakala  Magudapathi" />
+  </div>
+</section>
+
+    <!-- OTHER SECTIONS -->
+    <section class="info-section">
+  <h3 class="section-title">Professional Experience</h3>
+  <p class="section-description">
+    Dr. Gobinathan’s professional journey includes working as a Registrar in Paediatric Nephrology at the prestigious <span class="highlight-place">Great Ormond Street University Hospital (GOSH), London</span>, where he also trained for six months in pediatric subspecialties such as Gastroenterology, Neurology, Haematology, and Bone Marrow Transplantation. He further trained in Neonatology at <span class="highlight-place">Aberdeen University Hospital, Scotland</span>, a leading tertiary referral center in Europe. With seven years of training in the UK and membership in the RCPCH, he currently serves as a Consultant Paediatrician and Neonatologist at Kurinji Hospital and Genesis Women & Child Care Centre in Coimbatore. He also held leadership roles as Secretary for the Neonatology Forum in Coimbatore in <span class="highlight-year">2013</span> and Treasurer for KovaiNeocon in <span class="highlight-year">2014</span>.
+  </p>
+</section>
+
+    <section class="info-section">
+  <h3 class="section-title">Teaching Experience</h3>
+  <p class="section-description">
+    Dr. Gobinathan has extensive teaching experience, having mentored final-year MBBS students and house officers during his postgraduate days at the <span class="highlight-place">Institute of Child Health, Chennai</span>. In the UK, he contributed to training senior house officers and medical students as part of the RCPCH’s structured training program. His passion for education fuels his career objective to work in a teaching hospital, with a particular focus on advancing Paediatric Nephrology.
+  </p>
+</section>
+
+<section class="info-section">
+  <h3 class="section-title">Professional Training & International Conferences</h3>
+  <p class="section-description">
+    His professional training includes attending numerous specialized courses and international conferences. Notable among these are the <span class="highlight-place">International CME on Paediatric Hypertension & Vasculitis</span> held in <span class="highlight-place">Kolkata</span> in <span class="highlight-year">April 2014</span>, the 15th Annual Asia LSD Symposium in <span class="highlight-place">Chiba, Japan</span> in <span class="highlight-year">November 2013</span>, and the <span class="highlight-place">American Society of Nephrology Conference</span> in <span class="highlight-place">Philadelphia, USA</span> in <span class="highlight-year">June 2008</span>. In the UK, he completed the <span class="highlight-place">Advanced Neonatal Resuscitation Program</span> in <span class="highlight-place">Aberdeen</span> in <span class="highlight-year">January 2006</span>, the <span class="highlight-place">Paediatric Dermatology Conference</span> in <span class="highlight-place">Birmingham</span> in <span class="highlight-year">June 2007</span>, and studied <span class="highlight-place">Evidence-Based Medicine and Research Methodology</span> in <span class="highlight-place">Chennai</span> in <span class="highlight-year">March 2004</span>. Dr. Gobinathan also enhanced his management skills through courses in <span class="highlight-place">Negotiation Skills, Conflict Resolution, and Presentation Skills</span> for Healthcare Professionals in the UK in <span class="highlight-year">2005</span>.
+  </p>
+</section>
+
+<section class="info-section">
+  <h3 class="section-title">Presentations</h3>
+  <p class="section-description">
+    Throughout his career, Dr. Gobinathan has delivered presentations both in the UK and India. In the UK, his topics included neonatal thrombocytopenia, inborn errors of metabolism, asthma severity, and electrolyte imbalances in neonates. In India, he has presented on neonatal hypocalcaemia, leptospirosis in children, and congenital diaphragmatic hernia at various regional and national conferences.
+  </p>
+</section>
+
+<section class="info-section">
+  <h3 class="section-title">Research & Publications</h3>
+  <p class="section-description">
+    His research undertakings include a dissertation focused on evaluating the latex agglutination test for diagnosing leptospirosis in children, conducted at the <span class="highlight-place">Institute of Child Health in Chennai</span>. Additionally, he has contributed a chapter on "Steroid Sensitive Nephrotic Syndrome" in the <span class="highlight-place">Textbook of Paediatric Nephrology, Volume 2</span>. He has also led audits related to the management of pleural effusion, initial administration of antibiotics, and discharge letter protocols.
+  </p>
+</section>
+
+<!-- Consultation Button -->
+<div class="consultation-btn-container">
+  <a href="javascript:void(0)" class="consultation-btn" onclick="openForm()">Get Consultant from Our Doctor</a>
+</div>
+
+    <!-- CONSULTATION MODAL -->
+    <div id="consultationModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeForm()">&times;</span>
+        <h2>Book a Consultation</h2>
+        <form id="consultationForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Enter 10 digit number">
+
+          <label for="date">Select Date:</label>
+          <input type="date" id="date" name="date" required>
+
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div>
+  <hr>
+</div>
+
+{% endblock body %}

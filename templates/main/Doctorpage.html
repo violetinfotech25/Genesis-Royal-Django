@@ -1,0 +1,245 @@
+{% extends "layouts/doctor_layout.html" %}
+{% load static %}
+
+{% block title %}Our Doctors{% endblock title %}
+
+{% block body %}
+
+<div class="profile-container mx-auto px-6 max-w-7xl mt-16">
+
+  <!-- Doctor Cards -->
+  <div id="doctors" class="parallax4 section4 db" data-stellar-background-ratio="0.4" style="background:#fff;" data-scroll-id="doctors" tabindex="-1">
+    <div class="container">
+        <div class="heading">
+            <span class="icon-logo">
+                <img src="{% static 'images/logo/genesis logo mom.png' %}" alt="#" width="130px">
+            </span>
+            <h2>The Genesis Royal Infirmary</h2>
+        </div>
+
+        <div class="row dev-list text-center">
+            
+            <!-- Doctor 1 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                <div class="widget clearfix card shadow-sm" style="border-radius:10px; padding:20px;">
+                    <img src="{% static 'images/dr/gobinathan.png' %}" alt="" class="img-responsive img-rounded" style="margin:0 auto; max-width:500px;">
+                    
+                    <div class="widget-title mt-3">
+                        <h3 class="dr-name">Dr Saravanan Gobinathan</h3>
+                        <small style="font-size:18px;">M.B.B.S MD (Paediatrics) MRCPCH</small>
+                    </div>
+                    
+                    <p class="mt-2">
+                        The visionary founder of Genesis Royal Infirmary and Genesis Women’s & Child Care in Coimbatore.
+                    </p>
+
+                    <a href="{% url 'dr_gobinathan' %}" class="btn btn-primary mt-2">Know More</a>
+                </div>
+            </div>
+            <!-- end col -->
+
+            <!-- Doctor 2 -->
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                <div class="widget clearfix card shadow-sm" style="border-radius:10px; padding:20px;">
+                    <img src="{% static 'images/dr/chanrakala.png' %}" alt="" class="img-responsive img-rounded" style="margin:0 auto; max-width: 500px;">
+                    
+                    <div class="widget-title mt-3">
+                        <h3 class="dr-name">Dr Chandrakala Magudapathi</h3>
+                        <small style="font-size:18px;">MBBS, DGO, DNB (OG), FRCOG</small>
+                    </div>
+                    
+                    <p class="mt-2">
+                        The visionary Co-founder of Genesis Royal Infirmary and Genesis Women’s & Child Care in Coimbatore.
+                    </p>
+
+                    <a href="{% url 'dr_chadrakala' %}" class="btn btn-primary mt-2">Know More</a>
+                </div>
+            </div>
+            <!-- end col -->
+
+        </div><!-- end row -->
+    </div><!-- end container -->
+</div>
+<div class="topic-name container-fluid" style="">
+  <div class="container">
+    <h4>Practice Statistics (2017–2025)</h4>
+  </div>
+</div>
+
+<!-- Stats Section -->
+  <section class="metrics-section mt-24 mb-20 text-center">
+  <div class="static-container mx-auto">
+    <!-- <h2 class="metrics-title">Practice Statistics (2017–2025)</h2> -->
+    
+    <div class="metrics-inline flex flex-wrap justify-center gap-12 mt-12">
+      
+      <!-- Stat 1 -->
+      <div class="metrics-card circle-glow">
+        <h3 class="metrics-counter" data-target="25000">0</h3>
+        <p class="metrics-label">Outpatient Visits</p>
+      </div>
+
+      <!-- Stat 2 -->
+      <div class="metrics-card circle-glow">
+        <h3 class="metrics-counter" data-target="4000">0</h3>
+        <p class="metrics-label">Total Deliveries</p>
+      </div>
+
+      <!-- Stat 3 -->
+      <div class="metrics-card circle-glow">
+        <h3 class="metrics-counter" data-target="5000">0</h3>
+        <p class="metrics-label">Inpatient Visits</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="topic-name container-fluid" style="">
+  <div class="container">
+    <h4>OUR DOCTORS</h4>
+  </div>
+</div>
+
+<div id="doctorCarousel" class="carousel slide" data-ride="carousel" style="margin-top: 100px;">
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+
+    <!-- Slide 1 -->
+     <div class="item active">
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col-sm-4">
+          <div class="card" style="border-radius:10px; padding:20px;">
+            <img src="{% static 'images/dr/gobinathan.png' %}" alt="Dr Gobinathan" class="img-responsive img-rounded center-block" style="max-width:400px;">
+            <div class="widget-title text-center mt-3">
+              <h3 class="dr-name">Dr Saravanan Gobinathan</h3>
+              <small style="font-size:18px;">M.B.B.S MD (Paediatrics) MRCPCH</small>
+            </div>
+            <p class="mt-2 text-center">The visionary founder of Genesis Royal Infirmary and Genesis Women’s & Child Care in Coimbatore.</p>
+            <!-- <a href="{% url 'dr_gobinathan' %}" class="btn btn-primary center-block mt-2" style="width: fit-content;">Know More</a> -->
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-sm-4">
+          <div class="card" style="border-radius:10px; padding:20px;">
+            <img src="{% static 'images/dr/chanrakala.png' %}" alt="Dr Chandrakala" class="img-responsive img-rounded center-block" style="max-width:400px;">
+            <div class="widget-title text-center mt-3">
+              <h3 class="dr-name">Dr Chandrakala Magudapathi</h3>
+              <small style="font-size:18px;">MBBS, DGO, DNB (OG), FRCOG</small>
+            </div>
+            <p class="mt-2 text-center">The visionary Co-founder of Genesis Royal Infirmary and Genesis Women’s & Child Care in Coimbatore.</p>
+            <!-- <a href="{% url 'dr_chadrakala' %}" class="btn btn-primary center-block mt-2" style="width: fit-content;">Know More</a> -->
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-sm-4">
+          <div class="card" style="border-radius:10px; padding:20px;">
+            <img src="{% static 'images/dr/doc-1.jpg' %}" alt="Dr Chandrakala" class="img-responsive img-rounded center-block" style="max-width:400px;">
+            <div class="widget-title text-center mt-3">
+              <h3 class="dr-name">Dr Dhinnakaran babu</h3>
+              <small style="font-size:18px;">MS MCH UROLOGY</small>
+            </div>
+            <p class="mt-2 text-center">The visionary Co-founder of Genesis Royal Infirmary and Genesis Women’s & Child Care in Coimbatore.</p>
+            <!-- <a href="{% url 'dr_chadrakala' %}" class="btn btn-primary center-block mt-2" style="width: fit-content;">Know More</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- Slide 2 -->
+    <div class="item">
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col-sm-4">
+          <div class="card" style="border-radius:10px; padding:20px;">
+            <img src="{% static 'images/dr/doc-2.jpg' %}" alt="Dr Gobinathan" class="img-responsive img-rounded center-block" style="max-width:400px;">
+            <div class="widget-title text-center mt-3">
+              <h3 class="dr-name">Dr Mohan</h3>
+              <small style="font-size:18px;">M.B.B.S DA</small>
+            </div>
+            <p class="mt-2 text-center">The visionary founder of Genesis Royal Infirmary and Genesis Women’s & Child Care in Coimbatore.</p>
+            <!-- <a href="{% url 'dr_gobinathan' %}" class="btn btn-primary center-block mt-2" style="width: fit-content;">Know More</a> -->
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-sm-4">
+          <div class="card" style="border-radius:10px; padding:20px;">
+            <img src="{% static 'images/dr/doc-3.jpg' %}" alt="Dr Chandrakala" class="img-responsive img-rounded center-block" style="max-width:400px;">
+            <div class="widget-title text-center mt-3">
+              <h3 class="dr-name">Dr C Rajalakshmi</h3>
+              <small style="font-size:18px;"> MBBS DMRD</small>
+            </div>
+            <p class="mt-2 text-center">The visionary Co-founder of Genesis Royal Infirmary and Genesis Women’s & Child Care in Coimbatore.</p>
+            <!-- <a href="{% url 'dr_chadrakala' %}" class="btn btn-primary center-block mt-2" style="width: fit-content;">Know More</a> -->
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-sm-4">
+          <div class="card" style="border-radius:10px; padding:20px;">
+            <img src="{% static 'images/dr/doc-4.jpg' %}" alt="Dr Chandrakala" class="img-responsive img-rounded center-block" style="max-width:400px;">
+            <div class="widget-title text-center mt-3">
+              <h3 class="dr-name">Dr K L Hemalatha</h3>
+              <small style="font-size:18px;">DNB CARDIOLOGY</small>
+            </div>
+            <p class="mt-2 text-center">The visionary Co-founder of Genesis Royal Infirmary and Genesis Women’s & Child Care in Coimbatore.</p>
+            <!-- <a href="{% url 'dr_chadrakala' %}" class="btn btn-primary center-block mt-2" style="width: fit-content;">Know More</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Indicators -->
+  <ol class="carousel-indicators" style="text-align:center; margin-top: 15px;">
+  <li data-target="#doctorCarousel" data-slide-to="0" class="active"></li>
+  <li data-target="#doctorCarousel" data-slide-to="1"></li>
+  <!-- more li if needed -->
+  </ol>
+
+  <!-- Controls -->
+  <!-- <a class="left carousel-control custom-left-arrow" href="#doctorCarousel" role="button" data-slide="prev">
+  <span aria-hidden="true">&#x25C0;</span> Unicode left-pointing triangle
+  <span class="sr-only">Previous</span>
+</a>
+  <a class="right carousel-control custom-right-arrow" href="#doctorCarousel" role="button" data-slide="next">
+  <span aria-hidden="true">&#x25B6;</span> Unicode right-pointing triangle
+  <span class="sr-only">Next</span>
+</a> -->
+
+</div>
+
+
+<div class="container-fluid" style="margin-top: 100px;">
+  <hr>
+</div>
+
+</div>
+
+<!-- Counter Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".metrics-counter");
+
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute("data-target");
+        const current = +counter.innerText;
+        const increment = Math.ceil(target / 200); // speed
+
+        if (current < target) {
+          counter.innerText = current + increment;
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target.toLocaleString() + "+";
+        }
+      };
+      updateCount();
+    });
+  });
+</script>
+
+{% endblock body %}

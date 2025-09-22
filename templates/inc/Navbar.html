@@ -1,0 +1,54 @@
+{% load static %}
+<header>
+    <div class="header-top wow fadeIn">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="{% static 'images/logo/GENESIS ROYAL LOGO.png' %}" alt="image">
+            </a>
+            <div class="right-header">
+                <div class="header-info">
+                    <div class="info-inner">
+                        <span class="icontop">
+                            <img src="{% static 'images/phone-icon.png' %}" alt="#">
+                        </span>
+                        <span class="iconcont"><a href="tel:800123456">7 3 7 3 0 7 2 9 6 9</a></span>
+                    </div>
+                    <div class="info-inner">
+                        <span class="icontop">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </span>
+                        <span class="iconcont">
+                            <a data-scroll href="mailto:genesiswcc@gmail.com">genesiswcc@gmail.com</a>
+                        </span>
+                    </div>
+                    <div class="info-inner">
+                        <span class="icontop">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                        </span>
+                        <span class="iconcont" style="margin-top: -6px;">
+                            <a data-scroll href="#">Daily:7:00 AM - 7:00 PM <br>Emergency (After 7 PM)</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-bottom wow fadeIn">
+        <div class="container">
+            <nav class="main-menu">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a class="active" href="{% url 'home' %}">Home</a></li>
+                        <li><a data-scroll href="#about">About us</a></li>
+                        <li><a data-scroll href="#service">Services</a></li>
+                        <li><a data-scroll href="{% url 'doctors' %}">Doctors</a></li>
+                        <li><a data-scroll href="#getintouch">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>

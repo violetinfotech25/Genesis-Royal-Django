@@ -1,0 +1,455 @@
+{% extends "layouts/index_layout.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+<!-- Preloader -->
+<!-- <div id="preloader">
+    <img class="preloader" src="{% static 'images/loaders/heart-loading2.gif' %}" alt="Loading">
+</div> -->
+
+<!-- Hero Section -->
+
+<div id="home" class="parallax first-section wow fadeIn" data-stellar-background-ratio="0.1" style="min-height: 700px; background-image:url('{% static 'images/first-bg.png.jpg' %}');">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="text-contant">
+                    <h2>
+                        <span class="center">
+                            <span class="icon">
+                                <img class="logo1" src="{% static 'images/logo/genesis logo mom.png' %}" alt="#" />
+                            </span>
+                        </span>
+                        <!-- <a href="" class="typewrite" data-period="2000" data-type='[ "Welcome to Genesis Royal", "Healthy women", "healthy future", "Because every life begins with her" ]'>
+                            <span class="wrap"></span>
+                        </a> -->
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Table Content -->
+
+<div id="time-table" class="time-table-section" style="margin-top: 200px;">
+    <div class="container">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="service-time one" style="background:#7ca41d;;">
+                    <span class="info-icon"><i class="fa fa-ambulance" aria-hidden="true"></i></span>
+                    <h3>Emergency Case</h3>
+                    <p>When every second counts, our Emergency Department is here for you 24/7. Our team of highly trained doctors, nurses and specialists are equipped to handle life-threatening conditions, urgent medical situations and critical care needs with speed, precision and compassion.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="service-time middle" style="background:#686868;">
+                  <span class="info-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 
+                    <h3>Working Hours</h3>
+                    <div class="time-table-section">
+                        <ul>
+                            <li><span class="left">Monday - Sunday</span><span class="right">7:00 AM – 7:00 PM</span></li>
+                            <li><span class="left">Sunday</span><span class="right">Emergency case only</span></li>
+                            <li><span class="left">After 7:00 PM</span><span class="right">Emergency case only</span></li>
+                            <li><span class="left">Pharmacy</span><span class="right">24*7 Available</span></li>
+                            <li><span class="left">Canteen</span><span class="right">24*7 Available</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="service-time three" style="background:#009ee4;">
+                  <span class="info-icon"><i class="fa fa-hospital-o" aria-hidden="true"></i></span>
+                    <h3>Mission & Vision</h3>
+                    <p>We are committed to safe, respectful, and personalized care that promotes the well-being, dignity and empowerment of every human begins <br>through health education, advanced treatment and emotional support, enabling them to lead healthy and fulfilling lives.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- ABOUT SECTION -->
+      <div id="about" class="section wow fadeIn">
+    <div class="container">
+        <div class="heading" style="margin-bottom: 100px; margin-top: -80px; ">
+            <span class="icon-logo"><img src="{% static 'images/logo/genesis logo mom.png' %}" alt="Genesis Logo"></span>
+            <h2>The Genesis Royal Infirmary</h2>
+        </div>
+        <!-- end title -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="message-box">
+                    <h4>What We Do</h4>
+                    <h2>Infirmary Service</h2>
+                    <p class="lead" style="color: rgba(0, 0, 0, 0.781);">"Genesis Women's and Child Care was founded on June 14, 2019 by Mrs.Magudapathi with a heartfelt mission — to provide quality, compassionate healthcare for human beings in the Pappanayakenpalayam community."</p>
+                    <div id="moreText" style="display: none;">
+                        <p class="lead" style="color: rgba(0, 0, 0, 0.781);">We focused on delivering personalized medical care in a welcoming and supportive environment. As our commitment and reputation grew, we expanded our services. On June 14 2018, we opened Genesis Royal Infirmary in Puliyakulam, further extending our reach and ability to serve more patients with advanced facilities and specialized care. Today, Genesis stands as a trusted name in human beings healthcare, blending medical expertise, modern technology, and a compassionate touch — ensuring every patient feels valued, respected, and cared for.</p>
+                    </div>
+                    <button id="toggleBtn" class="btn btn-light btn-radius btn-brd grd1 effect-1" onclick="toggleText()">Learn More</button>
+                </div>
+                <!-- end messagebox -->
+            </div>
+            <!-- end col -->
+            <div class="col-md-6">
+                <div class="post-media wow fadeIn">
+                    <!-- Local Video -->
+                    <video id="aboutVideo" class="img-responsive" poster="{% static 'images/first-bg.png.jpg' %}" preload="none">
+                        <source src="{% static 'videos/MAGUDAM_final.mp4' %}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <!-- Play Button -->
+                    <a href="javascript:void(0);" class="playbutton" onclick="playLocalVideo()">
+                        <i class="flaticon-play-button"></i>
+                    </a>
+                </div>
+                <!-- end media -->
+            </div>
+            <!-- end col -->
+        </div>
+        <!-- end row -->
+        <hr class="hr1">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <!-- <a href="{% static 'images/rooms/lab.jpg' %}" class="hoverbutton global-radius">
+                            <i class="flaticon-unlink"></i>
+                        </a> -->
+                        <img src="{% static 'images/rooms/lab.jpg' %}" alt="Digital Control Center" class="img-responsive">
+                    </div>
+                    <h3>Digital <br> Lab Center</h3>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <!-- <a href="{% static 'images/rooms/oprationthreater.jpg' %}" class="hoverbutton global-radius">
+                            <i class="flaticon-unlink"></i>
+                        </a> -->
+                        <img src="{% static 'images/rooms/oprationthreater.jpg' %}" alt="Hygienic Operating Room" class="img-responsive">
+                    </div>
+                    <h3>Hygienic <br>Operating Room</h3>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <!-- <a href="{% static 'images/rooms/gen-3.jpg' %}" class="hoverbutton global-radius">
+                            <i class="flaticon-unlink"></i>
+                        </a> -->
+                        <img src="{% static 'images/rooms/gen-3.jpg' %}" alt="Specialist Physicians" class="img-responsive">
+                    </div>
+                    <h3>Specialist <br> Physicians</h3>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="service-widget">
+                    <div class="post-media wow fadeIn">
+                        <!-- <a href="{% static 'images/rooms/banner2.jpg' %}" class="hoverbutton global-radius">
+                            <i class="flaticon-unlink"></i>
+                        </a> -->
+                        <img src="{% static 'images/rooms/banner2.jpg' %}" alt="Digital Lab" class="img-responsive">
+                    </div>
+                    <h3>Digitized <br> Pharmacy </h3>
+                </div>
+            </div>
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</div>
+
+
+
+
+      <div id="service" class="services wow fadeIn">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+                  <div class="inner-services">
+                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="serv">
+                           <span class="icon-service"><img src="{% static 'images/service-icon1.png' %}" alt="#" /></span>
+                           <h4>PREMIUM FACILITIES</h4>
+                           <!-- <p>Lorem Ipsum is simply dummy text of the printing.</p> -->
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="serv">
+                           <span class="icon-service"><img src="{% static 'images/service-icon2.png' %}" alt="#" /></span>
+                           <h4>LARGE LABORATORY</h4>
+                           <!-- <p>Lorem Ipsum is simply dummy text of the printing.</p> -->
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="serv">
+                           <span class="icon-service"><img src="{% static 'images/service-icon3.png' %}" alt="#" /></span>
+                           <h4>DETAILED SPECIALIST</h4>
+                           <!-- <p>Lorem Ipsum is simply dummy text of the printing.</p> -->
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="serv">
+                           <span class="icon-service"><img src="{% static 'images/service-icon4.png' %}" alt="#" /></span>
+                           <h4>CHILDREN CARE CENTER</h4>
+                           <!-- <p>Lorem Ipsum is simply dummy text of the printing.</p> -->
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="serv">
+                           <span class="icon-service"><img src="{% static 'images/service-icon5.png' %}" alt="#" /></span>
+                           <h4>FINE INFRASTRUCTURE</h4>
+                           <!-- <p>Lorem Ipsum is simply dummy text of the printing.</p> -->
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div class="serv">
+                           <span class="icon-service"><img src="{% static 'images/medical.png' %}" alt="#" /></span>
+                           <h4>PHARMACY 24 x 7</h4>
+                           <!-- <p>Lorem Ipsum is simply dummy text of the printing.</p> -->
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                  <div class="appointment-form">
+                     <h3><span>+</span> Book Appointment</h3>
+                     <div class="form">
+                        <form action="index.html">
+                           <fieldset>
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="row">
+                                    <div class="form-group">
+                                       <input type="text" id="name" placeholder="Your Name"  />
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="row">
+                                    <div class="form-group">
+                                       <input type="email" placeholder="Email Address" id="email" />
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 select-section">
+                                 <div class="row">
+                                    <div class="form-group">
+                                       <select class="form-control">
+                                          <option>Day</option>
+                                          <option>Sunday</option>
+                                          <option>Monday</option>
+                                       </select>
+                                    </div>
+                                    <div class="form-group">
+                                       <select class="form-control">
+                                          <option>Time</option>
+                                          <option>AM</option>
+                                          <option>PM</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="row">
+                                    <div class="form-group">
+                                       <select class="form-control">
+                                          <option>Doctor Name</option>
+                                          <option>Mr.XYZ</option>
+                                          <option>Mr.ABC</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="row">
+                                    <div class="form-group">
+                                       <textarea rows="4" id="textarea_message" class="form-control" placeholder="Your Message..."></textarea>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                 <div class="row">
+                                    <div class="form-group">
+                                       <div class="center"><button type="submit">Submit</button></div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </fieldset>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end section -->
+	  
+	  <!-- doctor -->
+	  
+	  <div id="doctors" class="parallax4 section4 db" data-stellar-background-ratio="0.4" style="background:#fff;" data-scroll-id="doctors" tabindex="-1">
+         <div class="container">
+            <div class="heading">
+               <span class="icon-logo"><img src="{% static 'images/logo/genesis logo mom.png' %}" alt="#" width="130px"></span>
+               <h2>The Genesis Royal Infirmary</h2>
+            </div>
+            <div class="row dev-list text-center">
+               <!-- Doctor 1 -->
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                  <div class="widget clearfix">
+                     <img src="{% static 'images/dr/gobinathan.png' %}" alt="" class="img-responsive img-rounded">
+                     <div class="widget-title">
+                        <h3 class="dr-name">Dr Saravanan Gobinathan </h3>
+                        <small style="font-size: 18px;">MD(PAED), MRCPCH (UK), DM(NEPHRO)</small>
+                     </div>
+                     <p>the Managing Director of Genesis Royal Infirmary <br> in Coimbatore</p>
+                  </div>
+               </div>
+               <!-- end col -->
+               <!-- Doctor 2 -->
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                  <div class="widget clearfix">
+                     <img src="{% static 'images/dr/chanrakala.png' %}" alt="" class="img-responsive img-rounded">
+                     <div class="widget-title">
+                        <h3 class="dr-name">Dr Chandrakala Magudapathi</h3>
+                        <small style="font-size: 18px;">DGO, DNB(OG), FRCOG(UK)</small>
+                     </div>
+                     <p>the Co-Managing Director of Genesis Royal Infirmary <br> in Coimbatore</p>
+                  </div>
+               </div><!-- end col -->
+            </div><!-- end row -->
+         </div><!-- end container -->
+      </div>
+	  
+	  <!-- end doctor section -->
+	  
+      <div id="testimonials" class="section wb wow fadeIn">
+         <div class="container">
+            <div class="heading">
+               <span class="icon-logo"><img src="{% static 'images/logo/genesis logo mom.png' %}" alt="#"></span>
+               <h2>Testimonials</h2>
+            </div>
+            <!-- end title -->
+            <div class="row">
+               <div class="col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+                  <div class="testimonial clearfix">
+                     <div class="desc">
+                        <h3><i class="fa fa-quote-left"></i> Exceptional care from consultation to delivery made my motherhood journey special.</h3>
+                        <p class="lead" style="color: rgb(24, 24, 24);">From my first consultation to delivery, Dr. Chandrakala and her team were incredibly supportive. The personal care and attention made my journey into motherhood truly special.</p>
+                     </div>
+                     <div class="testi-meta">
+                        <img src="{% static 'images/feed/testi_04.png' %}" alt="" class="img-responsive alignleft">
+                        <h4>Priya S <small>- Coimbatore</small></h4>
+                     </div>
+                     <!-- end testi-meta -->
+                  </div>
+                  <!-- end testimonial -->
+               </div>
+               <!-- end col -->
+               <div class="col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
+                  <div class="testimonial clearfix">
+                     <div class="desc">
+                        <h3><i class="fa fa-quote-left"></i> Smooth recovery with professional and caring staff.</h3>
+                        <p class="lead" style="color: rgb(24, 24, 24);">I underwent laparoscopic surgery here, and the recovery was so smooth. The staff’s professionalism and kindness made me feel completely at ease.</p>
+                     </div>
+                     <div class="testi-meta">
+                        <img src="{% static 'images/feed/testi_03.png' %}" alt="" class="img-responsive alignleft">
+                        <h4>Meena R<small>- Tirupur</small></h4>
+                     </div>
+                     <!-- end testi-meta -->
+                  </div>
+                  <!-- end testimonial -->
+               </div>
+               <!-- end col -->
+            </div>
+            <!-- end row -->
+            <hr class="invis">
+            <div class="row">
+               <div class="col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
+                  <div class="testimonial clearfix">
+                     <div class="desc">
+                        <h3><i class="fa fa-quote-left"></i> Genesis Royal Infirmary feels like family, with clear guidance and safe care.</h3>
+                        <p class="lead"style="color: rgb(24, 24, 24);">Genesis Royal Infirmary is more than a hospital—it’s like a family. The doctors explained everything clearly, and I always felt safe in their hands.</p>
+                     </div>
+                     <div class="testi-meta">
+                        <img src="{% static 'images/feed/testi_02.png' %}" alt="" class="img-responsive alignleft">
+                        <h4>Lakshmi P <small>- Erode</small></h4>
+                     </div>
+                     <!-- end testi-meta -->
+                  </div>
+                  <!-- end testimonial -->
+               </div>
+               <!-- end col -->
+               <div class="col-md-6 col-sm-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.8s">
+                  <div class="testimonial clearfix">
+                     <div class="desc">
+                        <h3><i class="fa fa-quote-left"></i> Expert fetal care kept me and my baby healthy.</h3>
+                        <p class="lead"style="color: rgb(24, 24, 24);">When I faced complications during pregnancy, the fetal medicine team at Genesis took the best care of me and my baby. We’re both healthy today thanks to their expertise.</p>
+                     </div>
+                     <div class="testi-meta">
+                        <img src="{% static 'images/feed/testi_001.png' %}" alt="" class="img-responsive alignleft">
+                        <h4>Anitha K<small>- Coimbatore</small></h4>
+                     </div>
+                     <!-- end testi-meta -->
+                  </div>
+                  <!-- end testimonial -->
+               </div>
+               <!-- end col -->
+            </div>
+            <!-- end row -->
+         </div>
+         <!-- end container -->
+      </div>
+      <!-- end section -->
+      <div id="getintouch" class="section wb wow fadeIn" style="padding-bottom:0;">
+         <div class="container">
+            <div class="heading">
+               <span class="icon-logo"><img src="{% static 'images/logo/genesis logo mom.png' %}" alt="#"></span>
+               <h2>Get in Touch</h2>
+            </div>
+         </div>
+         <div class="contact-section" style="background-image: url('{% static 'images/banner2.png' %}'); background-size: 100% 600px;">
+            <div class="form-contant">
+               <form id="ajax-contact" action="assets/mailer.php" method="post">
+                  <div class="row">
+                     <div class="col-md-6">
+                        <div class="form-group in_name">
+                           <input type="text" class="form-control" placeholder="Name" required="required">
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="form-group in_email">
+                           <input type="email" class="form-control" placeholder="E-mail" required="required">
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="form-group in_email">
+                           <input type="tel" class="form-control" id="phone" placeholder="Phone" required="required">
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="form-group in_email">
+                           <input type="text" class="form-control" id="subject" placeholder="Subject" required="required">
+                        </div>
+                     </div>
+                     <div class="col-md-12">
+                        <div class="form-group in_message"> 
+                           <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required"></textarea>
+                        </div>
+                        <div class="actions">
+                           <input type="submit" value="Send Message" name="submit" id="submitButton" class="btn small" title="Submit Your Message!">
+                        </div>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+
+{% endblock body %}
